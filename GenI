@@ -102,7 +102,7 @@
 		</section>
 
     	<section class="events clearfix">
-    		<div class="calander">
+    		<!-- <div class="calander">
                 <div class="rectangle">
                     <div class="rec1"></div>
                     <div class="rec2"></div>
@@ -111,14 +111,56 @@
                     <p><span>november 21 2018</span> 6:30 pm</br><span>y-space</span> 169 enterprise blvd,</br>markham</p>
                     <div class="register"><p>register now</p></div>
                 </div>      
-            </div>
+            </div> -->
 
-    		<div class="curious">
+    		<!-- <div class="curious">
     			<h2>Curious about how you can change the world for the better?</h2>
     			<p>Wheter you are a social entrepenuer seeking like-minded changemakers, or you are curious about social innovation, this event will connect you to the right people and resources.</p>
-    		</div>
+    		</div> -->
 
-    		<div class="speakers">
+            <div class="events-title">
+                <h2>Get connected.</br>Learn about social enterprise.</br>Power up your world-changing oganization.</h2>
+            </div>
+
+            <section class="events-info">
+                <div class="events-wrapper">
+                    <article>
+                        <div class="event-date">
+                            
+                            <div class="event-image">
+                                <img src="images/event-image.jpg">
+                            </div>
+                            <div class="date">
+                                <div class="date-border">
+                                <h1>JAN</br>22</h1>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="event-content">
+                            <h2>Social Finance 101: Funding Your Social Startup</h2>
+                            <p>Maecenas faucibus mollis interdum.  Cum sociis natoque penatibus dis parturoent montes, nascetur ridiculus mus.  Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Nulla vitae elit libero, a pharetra augue. Donec sed odio dui.</p>
+                        </div>
+                    </article>
+                    <article>
+                        <div class="event-date">
+                            <div class="event-image">
+                            <img src="images/event-coffee.jpg">
+                            </div>
+                            <div class="date">
+                                <div class="date-border">
+                                <h1>FEB</br>05</h1>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="event-content">
+                            <h2>Catalyst Coffees: Speed Networking for Social</h2>
+                            <p>Maecenas faucibus mollis interdum.  Cum sociis natoque penatibus dis parturoent montes, nascetur ridiculus mus.  Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Nulla vitae elit libero, a pharetra augue. Donec sed odio dui.</p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+    		<!-- <div class="speakers">
     			     <h2>FEATURE SPEAKERS</h2>
                 <div class="speaker">
                     <img src="https://media.licdn.com/dms/image/C4E03AQHX0b6dATICEQ/profile-displayphoto-shrink_800_800/0?e=1547683200&v=beta&t=i9hkN_truhkOvL9sxn1ovLmkM_iFq-4rmOOgH0dA9ZI">
@@ -140,10 +182,10 @@
                     <h2>raphael costa</h2>
                     <p>Manager,</br>small Business & Entrepeneurship Centre</p>
                 </div>
-    		</div> 
+    		</div>  -->
     	</section>
 
-        <section class="skewedSection-logo clearfix">
+        <!-- <section class="skewedSection-logo clearfix">
                 <svg class="skewedSection-SVGTopW-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 10" preserveAspectRatio="none">
                     <polygon points="100 0 100 10 0 0"></polygon>
                 </svg>
@@ -156,7 +198,7 @@
                 <svg class="skewedSection-SVGBottom-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 10" preserveAspectRatio="none">
                     <polygon points="100 10 0 10 0 10"></polygon>
                 </svg>
-        </section>     
+        </section>  -->    
 
         <!-- EVENTS SECTION ENDS HERE -->
 
