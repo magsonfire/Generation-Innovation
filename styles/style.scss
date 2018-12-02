@@ -5,13 +5,6 @@ input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}b
 
 * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
-$primary-color: #3E03AD;
-$secondary-color: #00C6CA;
-$minor-color: #C5C202;
-
-$header-font: 'Oswald', sans-serif;
-$main-font: 'Source Sans Pro', sans-serif;
-
 * {
   box-sizing: border-box;
 }
@@ -28,9 +21,10 @@ $main-font: 'Source Sans Pro', sans-serif;
 /**********************************
 /* TYPOGRAPHY
 /* - Imports
-/* - Basic Styles
-/* - Type Variables
 **********************************/
+
+/* Webfont Imports */
+// Avenir Next: 900, 200, Normal Italic, Normal
 @font-face {
   font-family: 'Avenir Next';
   src: url('../fonts/AvenirNext-Regular.woff') format('woff2'),
@@ -40,7 +34,7 @@ $main-font: 'Source Sans Pro', sans-serif;
 }
 
 @font-face {
-  font-family: 'Avenir Next Ultra';
+  font-family: 'Avenir Next';
   src: url('../fonts/AvenirNext-UltraLight.woff2') format('woff2'),
       url('../fonts/AvenirNext-UltraLight.woff') format('woff');
   font-weight: 200;
@@ -69,12 +63,131 @@ $main-font: 'Source Sans Pro', sans-serif;
       url('../fonts/AvenirNext-Regular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
+}
 
+// Open Sans: 700 (Bold), 700 (Bold) Italic, Normal Italic, Normal
 
+@font-face {
+  font-family: 'Open Sans';
+  src: url('open_sans_700-webfont.woff2') format('woff2'),
+       url('open_sans_700-webfont.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url('open_sans_700italic-webfont.woff2') format('woff2'),
+       url('open_sans_700italic-webfont.woff') format('woff');
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url('open_sans_italic-webfont.woff2') format('woff2'),
+       url('open_sans_italic-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url('open_sans_regular-webfont.woff2') format('woff2'),
+       url('open_sans_regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/**********************************
+/* SASS VARIABLES
+/* - Typography
+/* - Colours
+/* - Gradients
+/* - CSS Shapes
+**********************************/
+
+/* Typography Variables */
+$body-font: 'Open Sans', Arial, Helvetica, sans-serif;
+$header-font: 'Avenir Next', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+/* Colour Variables */
+$primary-color: #350462; // Dark Purple
+$secondary-color: #03DCBB; // Aqua
+$minor-color: #FED702; // Gold
+$body-text-color: #000000; //Black
 
 
 /**********************************
-/* THIS IS FOR THE SKEWED SECTION (Section Headers)
+/* TYPOGRAPHY STYLES
+/* - Setup (body, html)
+/* - Headers
+/* - Lists (UL, OL)
+/* - Links
+/* - CTAs
+**********************************/
+
+/* Typography Styles Setup */
+
+// Setting catch-all font for body & html
+body, html {
+  font-family: $body-font;
+  font-size: 16px; // All fonts will be scaled based on this font size, by using REM, for best accessibility.
+  color: $body-text-color;
+}
+
+// Basic Header Styles (can modify later for special cases within sections)
+h1, h2, h3, h4, h5, h6 {
+  font-family: $header-font;
+  font-weight: bold;
+  line-height: 1.5;
+  letter-spacing: 0.8px;
+}
+
+/* Really, I'm just using these below H1-6 styles to assign a variety of font sizing that I know I'll be using throughout this design */
+h1 {
+  font-size: 5rem; // =80pt, for page titles
+}
+
+h2 {
+  font-size: 3.75rem; // =60pt, for top-level section headings within pages
+  text-transform: uppercase;
+}
+
+h3 {
+  font-size: 2.25rem; // =36pt, for lightweight sub-headings/leeds below section heads
+  font-weight: 200;
+}
+
+h4 {
+  font-size: 1.5rem; // =24pt, for bold sub-headings
+  text-transform: uppercase;
+}
+
+h5 {
+  font-size: 1.25rem; // =24 pt, for module titles (e.g. event cards, CTA buttons, banners, etc.)
+}
+
+h6 {
+  font-size: 1.25rem;
+  font-style: italic;
+  font-weight: bold;
+}
+
+p {
+  line-height: 1.5;
+  letter-spacing: 1.1px;
+}
+
+/* Links within paragraphs */
+p a {
+  font-weight: bold;
+  color: $secondary-color;
+}
+
+
+/**********************************
+/* THIS IS FOR THE SKEWED SECTION
 **********************************/
 
 .skewedSection, .skewedSection-vision, .skewedSection-logo {
@@ -100,7 +213,7 @@ $main-font: 'Source Sans Pro', sans-serif;
 }
 
 .skewedSection-title {
-  font-family: "Avenir LT W01_85 Heavy", Helvetica, Arial, sans-serif !important;
+  font-family: $header-font;
 }
 
 .skewedSection-contentWrapper {
@@ -244,13 +357,13 @@ div {
 }
 
 .content-intro h1 {
-	font-family: 'Oswald', sans-serif;
+	font-family: $header-font;
   	font-size: 4em;
   	color: #fff;
 }
 
 .content-intro h3 {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: $header-font;
   padding-top: 5vh;
   font-size: 2em;
   color: #fff;
@@ -294,7 +407,7 @@ div {
   padding-top: 25%;
   padding-left: 2.5vw;
   color: $secondary-color;
-  font-family: 'Oswald', sans-serif;
+  font-family: $header-font;
   font-size: 3em;
 }
 

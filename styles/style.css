@@ -143,7 +143,121 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   clear: both;
   height: 0; }
 
-/*THIS IS FOR THE SKEWED SECTION*/
+/**********************************
+/* TYPOGRAPHY
+/* - Imports
+**********************************/
+/* Webfont Imports */
+@font-face {
+  font-family: 'Avenir Next';
+  src: url("../fonts/AvenirNext-Regular.woff") format("woff2"), url("../fonts/AvenirNext-Heavy.woff") format("woff");
+  font-weight: 900;
+  font-style: normal; }
+@font-face {
+  font-family: 'Avenir Next';
+  src: url("../fonts/AvenirNext-UltraLight.woff2") format("woff2"), url("../fonts/AvenirNext-UltraLight.woff") format("woff");
+  font-weight: 200;
+  font-style: normal; }
+@font-face {
+  font-family: 'Avenir Next';
+  src: url("../fonts/AvenirNext-Bold.woff2") format("woff2"), url("../fonts/AvenirNext-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal; }
+@font-face {
+  font-family: 'Avenir Next';
+  src: url("../fonts/AvenirNext-Italic.woff2") format("woff2"), url("../fonts/AvenirNext-Italic.woff") format("woff");
+  font-weight: normal;
+  font-style: italic; }
+@font-face {
+  font-family: 'Avenir Next';
+  src: url("../fonts/AvenirNext-Regular.woff2") format("woff2"), url("../fonts/AvenirNext-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'Open Sans';
+  src: url("open_sans_700-webfont.woff2") format("woff2"), url("open_sans_700-webfont.woff") format("woff");
+  font-weight: bold;
+  font-style: normal; }
+@font-face {
+  font-family: 'Open Sans';
+  src: url("open_sans_700italic-webfont.woff2") format("woff2"), url("open_sans_700italic-webfont.woff") format("woff");
+  font-weight: bold;
+  font-style: italic; }
+@font-face {
+  font-family: 'Open Sans';
+  src: url("open_sans_italic-webfont.woff2") format("woff2"), url("open_sans_italic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: italic; }
+@font-face {
+  font-family: 'Open Sans';
+  src: url("open_sans_regular-webfont.woff2") format("woff2"), url("open_sans_regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+/**********************************
+/* SASS VARIABLES
+/* - Typography
+/* - Colours
+/* - Gradients
+/* - CSS Shapes
+**********************************/
+/* Typography Variables */
+/* Colour Variables */
+/**********************************
+/* TYPOGRAPHY STYLES
+/* - Setup (body, html)
+/* - Headers
+/* - Lists (UL, OL)
+/* - Links
+/* - CTAs
+**********************************/
+/* Typography Styles Setup */
+body, html {
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  color: #000000; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Avenir Next", "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: bold;
+  line-height: 1.5;
+  letter-spacing: 0.8px; }
+
+/* Really, I'm just using these below H1-6 styles to assign a variety of font sizing that I know I'll be using throughout this design */
+h1 {
+  font-size: 5rem; }
+
+h2 {
+  font-size: 3.75rem;
+  text-transform: uppercase; }
+
+h3 {
+  font-size: 2.25rem;
+  font-weight: 200; }
+
+h4 {
+  font-size: 1.5rem;
+  text-transform: uppercase; }
+
+h5 {
+  font-size: 1.25rem; }
+
+h6 {
+  font-size: 1.25rem;
+  font-style: italic;
+  font-weight: bold; }
+
+p {
+  line-height: 1.5;
+  letter-spacing: 1.1px; }
+
+/* Links within paragraphs */
+p a {
+  font-weight: bold;
+  color: #03DCBB; }
+
+/**********************************
+/* THIS IS FOR THE SKEWED SECTION
+**********************************/
 .skewedSection, .skewedSection-vision, .skewedSection-logo {
   position: relative; }
 
@@ -162,7 +276,7 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   background-attachment: fixed; }
 
 .skewedSection-title {
-  font-family: "Avenir LT W01_85 Heavy", Helvetica, Arial, sans-serif !important; }
+  font-family: "Avenir Next", "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif; }
 
 .skewedSection-contentWrapper {
   padding-top: 250px;
@@ -181,23 +295,23 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
 
 .skewedSection-SVGTopW-vision {
   position: absolute;
-  fill: #3E03AD; }
+  fill: #350462; }
 
 .skewedSection-SVGTopW-logo {
   position: absolute;
-  fill: #3E03AD; }
+  fill: #350462; }
 
 .skewedSection-SVGBottom {
   position: absolute;
-  fill: #3E03AD; }
+  fill: #350462; }
 
 .skewedSection-SVGBottom-vision {
   position: absolute;
-  fill: #00C6CA; }
+  fill: #03DCBB; }
 
 .skewedSection-SVGBottom-logo {
   position: absolute;
-  fill: #00C6CA; }
+  fill: #03DCBB; }
 
 .skewedSection-SVGBottom, .skewedSection-SVGBottom-vision, .skewedSection-SVGBottom-logo {
   bottom: 0; }
@@ -206,7 +320,7 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   font-size: 1px;
   font-weight: bold;
   text-anchor: middle;
-  fill: #3E03AD; }
+  fill: #350462; }
 
 .skewedSection-SVGBottom-text2 {
   font-size: 1px;
@@ -242,7 +356,7 @@ div {
   position: absolute;
   top: 0;
   left: 0;
-  background-color: #3E03AD;
+  background-color: #350462;
   width: 100%;
   height: 100vh;
   opacity: 0.4; }
@@ -265,12 +379,12 @@ div {
   opacity: 0.8; }
 
 .content-intro h1 {
-  font-family: 'Oswald', sans-serif;
+  font-family: "Avenir Next", "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-size: 4em;
   color: #fff; }
 
 .content-intro h3 {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: "Avenir Next", "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   padding-top: 5vh;
   font-size: 2em;
   color: #fff; }
@@ -280,7 +394,7 @@ div {
 .about {
   max-width: 100vw;
   margin: 0 auto;
-  background-color: #3E03AD;
+  background-color: #350462;
   height: 100vh; }
 
 .about-content {
@@ -289,15 +403,15 @@ div {
 .about-content h1 {
   padding-top: 25%;
   padding-left: 2.5vw;
-  color: #00C6CA;
-  font-family: 'Oswald', sans-serif;
+  color: #03DCBB;
+  font-family: "Avenir Next", "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-size: 3em; }
 
 .about-content h2 {
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 1.25em;
   padding-left: 2.5vw;
-  color: #C5C202; }
+  color: #FED702; }
 
 .about-content p {
   font-family: 'Source Sans Pro', sans-serif;
@@ -318,18 +432,18 @@ div {
 /*EVENTS SECTIONS STARTS HERE*/
 .events {
   max-width: 100%;
-  background: #3E03AD; }
+  background: #350462; }
 
 /*creating clander*/
 .events-title {
   padding: 1vh 2.5vw; }
 
 .events-title h2 {
-  color: #C5C202;
+  color: #FED702;
   font-size: 2em; }
 
 .events-info {
-  background: #3E03AD;
+  background: #350462;
   padding: 100px 0;
   width: 100%; }
 
@@ -338,7 +452,7 @@ div {
   margin: 0 auto; }
 
 article {
-  background: #3E03AD;
+  background: #350462;
   width: calc((100% - 30px) / 2);
   margin-right: 30px;
   float: left; }
@@ -383,7 +497,7 @@ article {
   padding: 10px 30px; }
 
 .event-content h2 {
-  color: #00C6CA; }
+  color: #03DCBB; }
 
 .event-content p {
   color: #fff; }
@@ -427,8 +541,8 @@ article {
 .signup {
   margin: 0 auto;
   width: 15%;
-  background: #00C6CA;
-  border: 5px solid #00C6CA;
+  background: #03DCBB;
+  border: 5px solid #03DCBB;
   border-radius: 30px;
   color: #fff;
   text-align: center; }
