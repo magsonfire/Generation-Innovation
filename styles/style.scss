@@ -115,7 +115,9 @@ $header-font: 'Avenir Next', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sa
 $primary-color: #350462; // Dark Purple
 $secondary-color: #03DCBB; // Aqua
 $minor-color: #FED702; // Gold
-$body-text-color: #000000; //Black
+$light-accent-color: #FFFFFF; // White
+$dark-text-color: #000000; // Black
+$light-text-color: #FFFFFF; // White
 
 
 /**********************************
@@ -133,7 +135,7 @@ $body-text-color: #000000; //Black
 body, html {
   font-family: $body-font;
   font-size: 16px; // All fonts will be scaled based on this font size, by using REM, for best accessibility.
-  color: $body-text-color;
+  color: $dark-text-color;
 }
 
 // Basic Header Styles (can modify later for special cases within sections)
@@ -155,13 +157,13 @@ h2 {
 }
 
 h3 {
-  font-size: 2.25rem; // =36pt, for lightweight sub-headings/leeds below section heads
-  font-weight: 200;
+  font-size: 2rem; // =36pt, for lightweight sub-headings/leeds below section heads
+  text-transform: uppercase;
 }
 
 h4 {
-  font-size: 1.5rem; // =24pt, for bold sub-headings
-  text-transform: uppercase;
+  font-size: 2.5rem; // =24pt, for bold sub-headings
+  font-weight: 200;
 }
 
 h5 {
@@ -183,6 +185,92 @@ p {
 p a {
   font-weight: bold;
   color: $secondary-color;
+}
+
+
+/**********************************
+/* SECTION: EVENTS
+**********************************/
+
+.events {
+  max-width: 100%;
+  background: $primary-color;
+}
+
+.events-wrapper {
+	width: 90%;
+	margin: 0 auto;
+}
+
+.events-leed {
+  padding: 1vh 2.5vw;
+  color: $minor-color;
+}
+
+.date {
+  text-align: center;
+  margin-left: 2vw;
+  margin-top: 3vh;
+  z-index: 1;
+  height: 18vh;
+
+  .date-box {
+    padding: 20px;
+    background: rgba(80, 80, 80, 0.5);
+
+    h3, h4 {
+    color: $light-text-color;
+    margin: 0;
+    }
+  }
+
+}
+
+
+article {
+	background: $primary-color;
+	width: calc((100% - 30px) / 2);
+	margin-right: 30px;
+	float: left;
+}
+
+.events-info article:nth-of-type(2) {
+	margin-right: 0;
+}
+
+.event-header {
+  width: 100%;
+  height: 50vh;
+  position: relative;
+  display: flex;
+  justify-content: left;
+  overflow: hidden;
+  margin: 0 auto;
+
+  .event-image img{
+    width: 100%;
+    height: 50vh;
+  }
+
+  .event-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+
+}
+
+.event-content {
+  padding: 0 0 4rem;
+  
+  h5 {
+    color: $secondary-color;
+  }
+}
+
+.event-content p {
+	color: #fff;
 }
 
 
@@ -437,255 +525,6 @@ div {
 }
 
 /*ABOUT GENI ENDS HERE*/
-
-/*EVENTS SECTIONS STARTS HERE*/
-
-.events {
-  max-width: 100%;
-  // margin: 0 auto;
-  background: $primary-color;
-}
-
-/*creating clander*/
-
-// .calander {
-//   max-width: 30%;
-//   margin: 0 auto;
-// }
-
-// .rectangle {
-//   border: 7px solid #fff;
-//   border-radius: 20px; 
-//   text-align: center;
-//   padding-top: 20px;
-//   padding-bottom: 20px;
-// }
-
-// .rec1 {
-//   float: left;
-//   height: 5vh;
-//   width: 1%;
-//   border: 5px solid #fff;
-//   border-radius: 2px;
-//   transform: translate(800%, -100%);
-// }
-
-// .rec2 {
-//   float: right;
-//   height: 5vh;
-//   width: 1%;
-//   border: 5px solid #fff;
-//   border-radius: 2px;
-//   transform: translate(-800%, -100%);
-// }
-
-// .line {
-//   padding-top: 5vh;
-//   border-bottom: 5px solid #fff;
-// }
-
-// .rectangle h2 {
-//   color: $secondary-color;
-// }
-
-// .rectangle p {
-//   text-transform: uppercase;
-//   color: #fff;
-// }
-
-// .rectangle p span {
-//   color: $minor-color;
-// }
-
-// .register {
-//   margin: 0 auto;
-//   width: 30%;
-//   background: $secondary-color;
-//   border: 5px solid $secondary-color;
-//   border-radius: 30px;
-// }
-
-// .register p {
-//   /*font-size: 20px;*/
-//   color: #FFF;
-//   text-align: center;
-// }
-
-// .curious {
-//   padding: 5vw 5vh;
-// }
-
-// .curious h2 {
-//   color: $minor-color;
-// }
-
-// .curious p {
-//   color: #fff;
-// }
-
-.events-title {
-	padding: 1vh 2.5vw;
-}
-
-.events-title h2{
-	color: $minor-color;
-	font-size: 2em;
-}
-
-.events-info {
-	background: $primary-color;
-	padding: 100px 0;
-	width: 100%;
-}
-
-.events-wrapper {
-	width: 75%;
-	margin: 0 auto;
-}
-
-article {
-	background: $primary-color;
-	width: calc((100% - 30px) / 2);
-	margin-right: 30px;
-	float: left;
-}
-
-.events-info article:nth-of-type(2) {
-	margin-right: 0;
-}
-
-.event-date {
-  width: 100%;
-  height: 50vh;
-  position: relative;
-  display: flex;
-  justify-content: left;
-  overflow: hidden;
-  margin: 0 auto;
-}
-
-
-.event-date .event-image img{
-	width: 100%;
-	height: 50vh;
-}
-
-.event-date .event-image {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-}
-
-.event-date .date {
-  text-align: center;
-  margin-left: 2vw;
-  margin-top: 3vh;
-  z-index: 1;
-  height: 18vh;
-}
-
-.date-border {
-	padding: 1px 2vw 1px 2vw;
-  	background: rgba(80, 80, 80, 0.5);
-}
-
-.event-date .date .date-border h1 {
-	color: #fff;
-}
-
-.event-content {
-	padding: 10px 30px;
-}
-
-.event-content h2 {
-	color: $secondary-color;
-}
-
-.event-content p {
-	color: #fff;
-}
-
-
-
-
-
-// .events-info{
-// 	width: 75%;
-// 	margin: 0 auto;
-// }
-
-// .events-info>.event {
-// 	float: left;
-// 	width: 50%;
-// 	text-align: left;
-// }
-
-// .events-info>.event img {
-// 	width: 400px;
-// 	height: 300px;
-// 	background-position: 50% 50%;
-// 	background-repeat: no-repeat;
-// 	background-size: cover;
-// }
-
-
-
-// .speakers {
-//   max-width: 100vw;
-//   margin: 0 auto;
-//   padding-left: 2.5vw;
-// }
-
-// .speakers h2 {
-//   color: #fff;
-// }
-
-// .speaker {
-//   float: left;
-//   width: 25%;
-// }
-
-// .speaker img {
-//   width: 80%;
-//   border: 10px solid $secondary-color;
-//   border-radius: 50%;
-// }
-
-// .speaker p {
-//   color: $minor-color;
-// }
-
-/*placing logos*/
-
-// .container-logo {
-//   max-width: 1060px;
-//   margin: 0 auto;
-//   width: 90%;
-// }
-
-// .logo-content {
-//   padding-top: 18vh;
-//   padding-bottom: 0vh;
-//   min-height: 160px;
-//   transform: skew(-5deg, 5deg);
-// }
-
-// .container-logo img {
-//   max-width: 100%;
-// }
-
-// /* iphone */
-// @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
-//   .container-logo img { max-width: 100%; }
-// }
-
-// /* ipad */
-// @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
-//   .container-logo img { max-width: 100%; }
-// }
-
-/*EVENST SECTION ENDS HERE*/
 
 
 /*OUR VISION CONTENT*/
