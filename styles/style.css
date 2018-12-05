@@ -1,3 +1,10 @@
+/**********************************
+/* SCSS BOILERPLATE
+/* - Normalize
+/* - Clearfix
+/* - Cross-Browser border-box
+**********************************/
+@import url(normalize.css);
 article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
   display: block; }
 
@@ -199,9 +206,11 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
 /* - Colours
 /* - Gradients
 /* - CSS Shapes
+/* - Background Images
 **********************************/
 /* Typography Variables */
 /* Colour Variables */
+/* Background Images */
 /**********************************
 /* TYPOGRAPHY STYLES
 /* - Setup (body, html)
@@ -254,6 +263,170 @@ p {
 p a {
   font-weight: bold;
   color: #03DCBB; }
+
+/**********************************
+/* GLOBAL LAYOUT OBJECTS
+/* - .container (max-width)
+/* - Image backgrounds
+/* - Thematic clip paths
+**********************************/
+.container {
+  max-width: 95%;
+  margin: 0 auto; }
+
+.absolute {
+  position: absolute; }
+
+/* Thematic Clip Paths */
+.pentagon-right {
+  -webkit-clip-path: polygon(25% 0, 100% 0, 100% 73%, 44% 100%, 0 60%);
+  clip-path: polygon(25% 0, 100% 0, 100% 73%, 44% 100%, 0 60%); }
+
+/**********************************
+/* NAVBAR
+**********************************/
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: auto;
+  z-index: 999;
+  height: 60px;
+  background: #350462;
+  opacity: 0.9;
+  font-family: "Avenir Next", "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 16px;
+  padding: 0; }
+  nav ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    float: right;
+    width: 80%;
+    height: 100%; }
+    nav ul li {
+      flex: 1 0; }
+      nav ul li a {
+        display: inline-block;
+        color: #FFFFFF;
+        text-decoration: none;
+        height: 100%;
+        width: 100%;
+        text-align: center;
+        padding-top: 22px;
+        padding-bottom: 22px;
+        transition: background-color ease-in-out 300ms; }
+      nav ul li a:hover {
+        background: #03DCBB; }
+  nav .logo-wrapper {
+    width: 20%;
+    height: 100%;
+    float: left; }
+    nav .logo-wrapper #logo {
+      display: block;
+      width: auto;
+      padding-top: 5px;
+      margin-right: 30px;
+      margin-left: auto; }
+    nav .logo-wrapper img {
+      height: 90%; }
+    nav .logo-wrapper .logo-word {
+      display: inline-block;
+      vertical-align: middle;
+      color: #350462;
+      font-family: "Avenir Next", "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+      font-weight: bold;
+      letter-spacing: 0.8px;
+      line-height: 60px;
+      font-size: 42px;
+      padding-right: 30px;
+      float: right; }
+
+/**********************************
+/* SECTION: HERO (TOP)
+**********************************/
+.hero-image {
+  height: 50vw;
+  width: 50vw;
+  background: #03DCBB;
+  background: url("../images/rockyshoretoronto.jpg");
+  background-size: cover;
+  background-position: center center;
+  position: absolute;
+  top: 0;
+  right: 0; }
+
+#hero {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  margin-top: 3rem; }
+
+.hero-content {
+  position: relative;
+  left: 0;
+  padding-left: 10%;
+  padding-right: 5%;
+  max-width: 55vw; }
+  .hero-content h1 {
+    color: #350462;
+    font-size: 3.75rem;
+    line-height: 1.2; }
+  .hero-content h2 {
+    color: #333;
+    font-size: 1.5rem;
+    text-transform: none;
+    font-weight: normal; }
+  .hero-content h3 {
+    color: #333;
+    text-transform: none;
+    font-size: 1.5rem;
+    font-weight: bold; }
+
+/**********************************
+/* SECTION: ABOUT
+**********************************/
+.about {
+  max-width: 100vw;
+  margin: 0 auto;
+  background-color: #350462;
+  height: 100vh; }
+
+.about-content {
+  width: 50%; }
+
+.about-content h1 {
+  padding-top: 25%;
+  padding-left: 2.5vw;
+  color: #03DCBB;
+  font-family: "Avenir Next", "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 3em; }
+
+.about-content h2 {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1.25em;
+  padding-left: 2.5vw;
+  color: #FED702; }
+
+.about-content p {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1.15em;
+  padding-left: 2.5vw;
+  color: #fff; }
+
+.about-content span {
+  text-transform: uppercase;
+  font-weight: bold; }
+
+.about svg {
+  position: absolute;
+  width: 100%;
+  height: 100%; }
 
 /**********************************
 /* SECTION: EVENTS
@@ -389,7 +562,7 @@ article {
   text-anchor: middle;
   fill: white; }
 
-.container {
+.skewed-container {
   max-width: 1060px;
   margin: 0 auto;
   width: 90%; }
@@ -407,90 +580,6 @@ div {
   display: block; }
 
 /*SKEWED SECTION ENDS HERE*/
-/*HEADER SECTION STARTS HERE*/
-.video-container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%; }
-
-.color-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: #350462;
-  width: 100%;
-  height: 100vh;
-  opacity: 0.4; }
-
-.intro {
-  width: 100%;
-  height: 100vh;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: left;
-  overflow: hidden; }
-
-.content-intro {
-  width: 40vw;
-  text-align: left;
-  padding: 20px;
-  margin: 15px;
-  z-index: 1;
-  opacity: 0.8; }
-
-.content-intro h1 {
-  font-family: "Avenir Next", "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  font-size: 4em;
-  color: #fff; }
-
-.content-intro h3 {
-  font-family: "Avenir Next", "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  padding-top: 5vh;
-  font-size: 2em;
-  color: #fff; }
-
-/*HEADER SECTION ENDS HERE*/
-/*ABOUT GENI STARTS HERE*/
-.about {
-  max-width: 100vw;
-  margin: 0 auto;
-  background-color: #350462;
-  height: 100vh; }
-
-.about-content {
-  width: 50%; }
-
-.about-content h1 {
-  padding-top: 25%;
-  padding-left: 2.5vw;
-  color: #03DCBB;
-  font-family: "Avenir Next", "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  font-size: 3em; }
-
-.about-content h2 {
-  font-family: 'Source Sans Pro', sans-serif;
-  font-size: 1.25em;
-  padding-left: 2.5vw;
-  color: #FED702; }
-
-.about-content p {
-  font-family: 'Source Sans Pro', sans-serif;
-  font-size: 1.15em;
-  padding-left: 2.5vw;
-  color: #fff; }
-
-.about-content span {
-  text-transform: uppercase;
-  font-weight: bold; }
-
-.about svg {
-  position: absolute;
-  width: 100%;
-  height: 100%; }
-
-/*ABOUT GENI ENDS HERE*/
 /*OUR VISION CONTENT*/
 .wrapper-vision {
   max-width: 100vw;
