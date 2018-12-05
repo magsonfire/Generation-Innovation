@@ -1,10 +1,14 @@
 /**********************************
-/* SCSS BOILERPLATE
+/* SCSS BOILERPLATE / FIXES
 /* - Normalize
+/* - Import mobile styles
 /* - Clearfix
 /* - Cross-Browser border-box
 **********************************/
 @import url(normalize.css);
+/**********************************
+/* RESPONSIVE ADJUSTMENTS
+**********************************/
 article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
   display: block; }
 
@@ -210,6 +214,9 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
 **********************************/
 /* Typography Variables */
 /* Colour Variables */
+/* Gradients */
+/* Transitions */
+/* Borders */
 /* Background Images */
 /**********************************
 /* TYPOGRAPHY STYLES
@@ -352,13 +359,14 @@ nav {
 .hero-image {
   height: 50vw;
   width: 50vw;
-  background: #03DCBB;
-  background: url("../images/rockyshoretoronto.jpg");
-  background-size: cover;
-  background-position: center center;
   position: absolute;
   top: 0;
   right: 0; }
+
+.bkg-rocky-toronto {
+  background: url("../images/rockyshoretoronto.jpg");
+  background-size: cover;
+  background-position: center center; }
 
 #hero {
   width: 100%;
