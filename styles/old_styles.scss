@@ -1,0 +1,153 @@
+/* Events */
+/*creating clander*/
+
+// .calander {
+//   max-width: 30%;
+//   margin: 0 auto;
+// }
+
+// .rectangle {
+//   border: 7px solid #fff;
+//   border-radius: 20px; 
+//   text-align: center;
+//   padding-top: 20px;
+//   padding-bottom: 20px;
+// }
+
+// .rec1 {
+//   float: left;
+//   height: 5vh;
+//   width: 1%;
+//   border: 5px solid #fff;
+//   border-radius: 2px;
+//   transform: translate(800%, -100%);
+// }
+
+// .rec2 {
+//   float: right;
+//   height: 5vh;
+//   width: 1%;
+//   border: 5px solid #fff;
+//   border-radius: 2px;
+//   transform: translate(-800%, -100%);
+// }
+
+// .line {
+//   padding-top: 5vh;
+//   border-bottom: 5px solid #fff;
+// }
+
+// .rectangle h2 {
+//   color: $secondary-color;
+// }
+
+// .rectangle p {
+//   text-transform: uppercase;
+//   color: #fff;
+// }
+
+// .rectangle p span {
+//   color: $minor-color;
+// }
+
+// .register {
+//   margin: 0 auto;
+//   width: 30%;
+//   background: $secondary-color;
+//   border: 5px solid $secondary-color;
+//   border-radius: 30px;
+// }
+
+// .register p {
+//   /*font-size: 20px;*/
+//   color: #FFF;
+//   text-align: center;
+// }
+
+// .curious {
+//   padding: 5vw 5vh;
+// }
+
+// .curious h2 {
+//   color: $minor-color;
+// }
+
+// .curious p {
+//   color: #fff;
+// }
+
+
+/* Nov 20 Event Speakers & Logo Info */
+
+// .events-info{
+// 	width: 75%;
+// 	margin: 0 auto;
+// }
+
+// .events-info>.event {
+// 	float: left;
+// 	width: 50%;
+// 	text-align: left;
+// }
+
+// .events-info>.event img {
+// 	width: 400px;
+// 	height: 300px;
+// 	background-position: 50% 50%;
+// 	background-repeat: no-repeat;
+// 	background-size: cover;
+// }
+
+// .speakers {
+//   max-width: 100vw;
+//   margin: 0 auto;
+//   padding-left: 2.5vw;
+// }
+
+// .speakers h2 {
+//   color: #fff;
+// }
+
+// .speaker {
+//   float: left;
+//   width: 25%;
+// }
+
+// .speaker img {
+//   width: 80%;
+//   border: 10px solid $secondary-color;
+//   border-radius: 50%;
+// }
+
+// .speaker p {
+//   color: $minor-color;
+// }
+
+/*placing logos*/
+
+// .container-logo {
+//   max-width: 1060px;
+//   margin: 0 auto;
+//   width: 90%;
+// }
+
+// .logo-content {
+//   padding-top: 18vh;
+//   padding-bottom: 0vh;
+//   min-height: 160px;
+//   transform: skew(-5deg, 5deg);
+// }
+
+// .container-logo img {
+//   max-width: 100%;
+// }
+
+// /* iphone */
+// @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+//   .container-logo img { max-width: 100%; }
+// }
+
+// /* ipad */
+// @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+//   .container-logo img { max-width: 100%; }
+// }
